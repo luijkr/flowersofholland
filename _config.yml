@@ -1,4 +1,4 @@
-title: "Jekyll Bootstrap Starter" # the name of your site, e.g. ACME Corp.
+title: "My Website" # the name of your site, e.g. ACME Corp.
 tagline: "An awesome tagline"
 email: your.email@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
