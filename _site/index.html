@@ -14,10 +14,25 @@
     <title>Home - My Website</title>
 
     <link href="assets/css/main.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/fontawesome.min.css" rel="stylesheet">
+
+    <!-- Flower field map imports -->
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+    <!-- Mapbox GL -->
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.css" rel='stylesheet' />
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.js"></script>
+    <script src="https://unpkg.com/mapbox-gl-leaflet/leaflet-mapbox-gl.js"></script>
+
 
     <!-- Custom font for this template -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   </head>
 
   <body style="font-family: 'Work Sans', sans-serif;">
@@ -51,7 +66,7 @@
     <!-- Card on top of flower field background -->
 
 
-<div class="container-fluid bg-index">
+<div class="container-fluid cover-index">
   <div class="row h-100 justify-content-center">
     <div class="card my-auto pt-5 bg-transparent border-0 text-center">
       <div class="card-body">
@@ -86,30 +101,30 @@
 
 <div class="container-fluid">
   <div class="row justify-content-center">
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="10000000"
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="5000"
       data-pause="false">
       <div class="carousel-inner">
         
         
           
             <div class="row text-center carousel-item active">
-              <img class="center-block w-90" src="https://www.holland.com/upload_mm/e/a/1/68310_fullimage_tulipsfaq_818x512.jpg" alt="First slide">
+              <img class="center-block w-90" src="https://dummyimage.com/800x400/000/fff" alt="First slide">
             </div>
             
           
         
           
             <div class="row text-center carousel-item">
-              <img class="center-block w-90" src="https://www.holland.com/upload_mm/3/7/2/1536_fullimage_flower_field_peter_van_aalst_818x512.jpg" alt="Second slide">
+              <img class="center-block w-90" src="https://dummyimage.com/800x400/000/fff" alt="Second slide">
             </div>
           
         
       </div>
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span><i class="fas fa-3x fa-chevron-circle-left"></i></span>
       </a>
       <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span><i class="fas fa-3x fa-chevron-circle-right"></i></span>
       </a>
     </div>
   </div>
@@ -146,13 +161,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"></script>
-    <script>
-      Holder.addTheme('thumb', {
-        bg: '#55595c',
-        fg: '#eceeef',
-        text: 'Thumbnail'
-      });
-    </script>
+
   </body>
 
 </html>

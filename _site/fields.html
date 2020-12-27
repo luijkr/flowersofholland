@@ -14,10 +14,25 @@
     <title>Flower fields - My Website</title>
 
     <link href="assets/css/main.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/fontawesome.min.css" rel="stylesheet">
+
+    <!-- Flower field map imports -->
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+    <!-- Mapbox GL -->
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.css" rel='stylesheet' />
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.js"></script>
+    <script src="https://unpkg.com/mapbox-gl-leaflet/leaflet-mapbox-gl.js"></script>
+
 
     <!-- Custom font for this template -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   </head>
 
   <body style="font-family: 'Work Sans', sans-serif;">
@@ -48,7 +63,31 @@
 </div>
     </div>
 
-    Fields page
+    <div class="container">
+  <div class="row">
+    <div class="mx-auto mb-3" id="map"></div>
+  </div>
+</div>
+
+<script>
+  var token = "pk.eyJ1IjoibHVpamtyIiwiYSI6ImNrajZ1Mno3cjRob3gyd3NjMnQ4MmpzOWUifQ.UuVuOQnLd6XCSybIMEgS3A"; 
+
+  // create map, add style
+  var map = L.map('map').setView([52.23093733450451, 4.506046843593917], 11);
+  var gl = L.mapboxGL({
+      accessToken: token,
+      style: 'https://api.maptiler.com/maps/bright/style.json?key=bPm6NtEODcwwhBI9veko'
+  }).addTo(map);
+
+  // add markers from GeoJSON
+  var fields = {"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[4.506046843593917,52.23093733450451]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[4.524421043075897,52.27019143680588]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[4.533429728850646,52.24985801425459]}}]}; // ignore errors/warnings
+  L.geoJson(fields, {
+    onEachFeature: function (feature, layer) {
+      layer.bindPopup(feature.properties.name);
+    }
+  }).addTo(map);
+
+</script>
 
     <footer class="blog-footer">
   <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
@@ -67,13 +106,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"></script>
-    <script>
-      Holder.addTheme('thumb', {
-        bg: '#55595c',
-        fg: '#eceeef',
-        text: 'Thumbnail'
-      });
-    </script>
+
   </body>
 
 </html>

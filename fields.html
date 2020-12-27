@@ -2,4 +2,29 @@
 layout: default
 title: Flower fields
 ---
-Fields page
+
+<div class="container">
+  <div class="row">
+    <div class="mx-auto mb-3" id="map"></div>
+  </div>
+</div>
+
+<script>
+  var token = "pk.eyJ1IjoibHVpamtyIiwiYSI6ImNrajZ1Mno3cjRob3gyd3NjMnQ4MmpzOWUifQ.UuVuOQnLd6XCSybIMEgS3A"; 
+
+  // create map, add style
+  var map = L.map('map').setView([52.23093733450451, 4.506046843593917], 11);
+  var gl = L.mapboxGL({
+      accessToken: token,
+      style: 'https://api.maptiler.com/maps/bright/style.json?key=bPm6NtEODcwwhBI9veko'
+  }).addTo(map);
+
+  // add markers from GeoJSON
+  var fields = {{ site.data.fields | jsonify }}; // ignore errors/warnings
+  L.geoJson(fields, {
+    onEachFeature: function (feature, layer) {
+      layer.bindPopup(feature.properties.name);
+    }
+  }).addTo(map);
+
+</script>

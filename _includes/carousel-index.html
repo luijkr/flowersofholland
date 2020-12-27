@@ -1,10 +1,10 @@
 <div class="container-fluid">
   <div class="row justify-content-center">
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="10000000"
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="5000"
       data-pause="false">
       <div class="carousel-inner">
         {% assign first_image = true %}
-        {% for item in site.data.flower-carousel %}
+        {% for item in site.data.index-carousel %}
           {% if first_image %}
             <div class="row text-center carousel-item active">
               <img class="center-block w-90" src="{{ item.link }}" alt="{{ item.name }}">
@@ -18,10 +18,10 @@
         {% endfor %}
       </div>
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span><i class="fas fa-3x fa-chevron-circle-left"></i></span>
       </a>
       <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span><i class="fas fa-3x fa-chevron-circle-right"></i></span>
       </a>
     </div>
   </div>
