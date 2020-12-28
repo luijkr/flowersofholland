@@ -2,9 +2,9 @@
   link: /
 - name: Flower fields
   link: /fields
-- name: About
-  link: /about
 - name: Blog
   link: /blog
+- name: About
+  link: /about
 - name: Contact
   link: /contact

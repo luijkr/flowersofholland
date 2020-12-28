@@ -2133,3 +2133,5 @@ h1, h2, h3, h4, h5, h6 { font-family: "Playfair Display", Georgia, "Times New Ro
 .carousel-control-next { right: -15%; }
 
 #map { position: relative; width: 800px; height: 500px; }
+
+.nav-text { text-decoration: underline; -webkit-text-decoration-color: red; text-decoration-color: red; text-decoration-thickness: 2px; }
