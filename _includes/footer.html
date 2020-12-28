@@ -1,6 +1,11 @@
 <footer class="blog-footer">
-  <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+  <p>Flowers of Holland.</p>
   <p>
-    <a href="#">Back to top</a>
+    {% for item in site.data.footer %}
+      <a href="{{ item.link }}">
+        <i class="{{ item.icon-name }} fa-2x px-2" style="color: red;"></i>
+      </a>
+    {% endfor %}
   </p>
+  <p><a href="#">Back to top</a></p>
 </footer>
