@@ -2065,6 +2065,28 @@ a.text-dark:hover, a.text-dark:focus { color: #1d2124 !important; }
 
 @media print { *, *::before, *::after { text-shadow: none !important; box-shadow: none !important; } a:not(.btn) { text-decoration: underline; } abbr[title]::after { content: " (" attr(title) ")"; } pre { white-space: pre-wrap !important; } pre, blockquote { border: 1px solid #999; page-break-inside: avoid; } thead { display: table-header-group; } tr, img { page-break-inside: avoid; } p, h2, h3 { orphans: 3; widows: 3; } h2, h3 { page-break-after: avoid; } @page { size: a3; } body { min-width: 992px !important; } .container { min-width: 992px !important; } .navbar { display: none; } .badge { border: 1px solid #000; } .table { border-collapse: collapse !important; } .table td, .table th { background-color: #fff !important; } .table-bordered th, .table-bordered td { border: 1px solid #ddd !important; } }
 
+.cover-index { width: 100%; height: 500px; background: url("/assets/images/tulips-red-small.jpg") no-repeat center; background-size: cover; border-top: 2px solid red; }
+
+.cover-about { width: 100%; height: 500px; background: url("/assets/images/yellow-cropped-2.jpg") no-repeat center; background-size: cover; border-top: 2px solid #eeff00; }
+
+.main-header { position: relative; margin: 0; color: #fff; }
+
+* { font-family: 'Work Sans', sans-serif; }
+
+.vert-margin { margin-top: 100px; margin-bottom: 100px; }
+
+.fas { color: red; }
+
+.carousel-control-prev { left: -15%; }
+
+.carousel-control-next { right: -15%; }
+
+.carousel-img { width: 800px; height: 400px; overflow: hidden; }
+
+#map { position: relative; width: 800px; height: 500px; }
+
+.nav-text { text-decoration: underline; -webkit-text-decoration-color: red; text-decoration-color: red; text-decoration-thickness: 2px; }
+
 /* stylelint-disable selector-list-comma-newline-after */
 .blog-header { line-height: 1; border-bottom: 1px solid #e5e5e5; }
 
@@ -2092,46 +2114,5 @@ h1, h2, h3, h4, h5, h6 { font-family: "Playfair Display", Georgia, "Times New Ro
 
 @media (min-width: 768px) { .h-md-250 { height: 250px; } }
 
-/* Blog name and description */
-.blog-title { margin-bottom: 0; font-size: 2rem; font-weight: 400; }
-
-.blog-description { font-size: 1.1rem; color: #999; }
-
-@media (min-width: 40em) { .blog-title { font-size: 3.5rem; } }
-
-/* Pagination */
-.blog-pagination { margin-bottom: 4rem; }
-
-.blog-pagination > .btn { border-radius: 2rem; }
-
-/* Blog posts */
-.blog-post { margin-bottom: 4rem; }
-
-.blog-post-title { margin-bottom: .25rem; font-size: 2.5rem; }
-
-.blog-post-meta { margin-bottom: 1.25rem; color: #999; }
-
 /* Footer */
-.blog-footer { padding: 2.5rem 0; color: #999; text-align: center; background-color: #f9f9f9; border-top: .05rem solid #e5e5e5; }
-
-.blog-footer p:last-child { margin-bottom: 0; }
-
-.cover-index { width: 100%; height: 500px; background: url("/assets/images/tulips-red-small.jpg") no-repeat center; background-size: cover; border-top: 2px solid red; }
-
-.cover-about { width: 100%; height: 500px; background: url("/assets/images/yellow-cropped-2.jpg") no-repeat center; background-size: cover; border-top: 2px solid #eeff00; }
-
-.main-header { position: relative; margin: 0; color: #fff; }
-
-* { font-family: 'Work Sans', sans-serif; }
-
-.vert-margin { margin-top: 100px; margin-bottom: 100px; }
-
-.fas { color: red; }
-
-.carousel-control-prev { left: -15%; }
-
-.carousel-control-next { right: -15%; }
-
-#map { position: relative; width: 800px; height: 500px; }
-
-.nav-text { text-decoration: underline; -webkit-text-decoration-color: red; text-decoration-color: red; text-decoration-thickness: 2px; }
+.footer { padding-top: 1.5rem; text-align: center; border-top: 2px solid red; }

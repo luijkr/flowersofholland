@@ -1,4 +1,4 @@
-- link: https://dummyimage.com/800x400/000/fff #https://www.holland.com/upload_mm/e/a/1/68310_fullimage_tulipsfaq_818x512.jpg
+- link: /assets/images/carousel-1-800-400.jpg #https://dummyimage.com/800x400/000/fff #https://www.holland.com/upload_mm/e/a/1/68310_fullimage_tulipsfaq_818x512.jpg
   name: First slide
-- link: https://dummyimage.com/800x400/000/fff #https://www.holland.com/upload_mm/3/7/2/1536_fullimage_flower_field_peter_van_aalst_818x512.jpg
+- link: /assets/images/carousel-2-800-400.jpg #https://dummyimage.com/800x400/000/fff #https://www.holland.com/upload_mm/3/7/2/1536_fullimage_flower_field_peter_van_aalst_818x512.jpg
   name: Second slide

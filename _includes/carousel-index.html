@@ -6,13 +6,13 @@
         {% assign first_image = true %}
         {% for item in site.data.index-carousel %}
           {% if first_image %}
-            <div class="row text-center carousel-item active">
-              <img class="center-block w-90" src="{{ item.link }}" alt="{{ item.name }}">
+            <div class="row text-center carousel-item carousel-img active">
+              <img class="center-block" src="{{ item.link }}" alt="{{ item.name }}">
             </div>
             {% assign first_image = false %}
           {% else %}
-            <div class="row text-center carousel-item">
-              <img class="center-block w-90" src="{{ item.link }}" alt="{{ item.name }}">
+            <div class="row text-center carousel-item carousel-img">
+              <img class="center-block" src="{{ item.link }}" alt="{{ item.name }}">
             </div>
           {% endif %}
         {% endfor %}
