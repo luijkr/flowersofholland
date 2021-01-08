@@ -1,0 +1,43 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<!-- Card on top of flower field background -->
+
+<div class="container-fluid cover-index">
+  <div class="row h-100 justify-content-center">
+    <div class="card my-auto pt-5 bg-transparent border-0 text-center">
+      <div class="card-body">
+        <h2 class="card-title mb-0">
+          <span class="badge badge-pill badge-dark">
+            <u style="text-decoration-color: red;">Check it yo!</u>
+          </span>
+        </h2>
+        <h1 class="card-text text-white display-3">Flower fields of Holland</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- container with general information -->
+
+<div class="container">
+  <div class="row vert-margin">
+    <div class="col-md-7">
+      <h1 class="display-4 font-italic">Visit the most beautiful flower fields in Holland</h1>
+      <p class="lead my-3">Explore the different types of flower fields in Holland, and use the interactive map to find
+        the prettiest flower fields in the Flower Bulb district, or Bollenstreek</p>
+      <p class="lead mb-0"><a href="/about" class="text-white font-weight-bold">Explore flower fields near me</a></p>
+    </div>
+    <div class="col" style="border-left: 2px solid rgb(180, 180, 180);">
+      <img src="{{ url_for('static', filename='images/blank_map_of_the_netherlands.svg') }}" class="mx-auto d-block" style="height: 250px;">
+    </div>
+  </div>
+</div>
+
+<!-- Image carousel -->
+
+{% include "carousel-index.html" ignore missing %}
+
+{% endblock %}
